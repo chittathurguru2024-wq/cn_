@@ -1,0 +1,7 @@
+from scapy.all import *
+
+target_ip = "192.168.1.1"
+
+packet = IP(dst=target_ip)/ICMP()
+
+send(packet, loop=1, inter=0.001, verbose=False)
